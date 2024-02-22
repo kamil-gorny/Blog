@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDb"));
-builder.Services.AddSingleton<MongoDbService>();
+builder.Services.AddSingleton<MongoDbService<Post>>();
+builder.Services.AddSingleton<MongoDbService<Comment>>();
 
 builder.Services.AddControllers();
 var app = builder.Build();
