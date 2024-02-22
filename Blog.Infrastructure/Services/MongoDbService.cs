@@ -22,26 +22,26 @@ public class MongoDbService<T> where T : Entity
         await _collection.InsertOneAsync(entity);
     }
 
-    public async Task<List<T>> GetAsync()
+    public Task<List<T>> GetAsync()
     {
-        return await _collection.Find(new BsonDocument()).ToListAsync();
+        return _collection.Find(new BsonDocument()).ToListAsync();
     }
     
-    public async Task<T> GetByIdAsync(string id)
+    public Task<T> GetByIdAsync(string id)
     {
         var filter = Builders<T>.Filter.Eq("Id", id);
-        return await _collection.Find(filter).FirstOrDefaultAsync();
+        return _collection.Find(filter).FirstOrDefaultAsync();
     }
     
-    public async Task UpdateAsync(string id, T entity)
+    public Task UpdateAsync(string id, T entity)
     {
         var filter = Builders<T>.Filter.Eq("Id", id);
-        await _collection.ReplaceOneAsync(filter, entity);
+         return _collection.ReplaceOneAsync(filter, entity);
     }
     
-    public async Task DeleteAsync(string id)
+    public Task DeleteAsync(string id)
     {
         var filter = Builders<T>.Filter.Eq("Id", id);
-        await _collection.DeleteOneAsync(filter);
+        return  _collection.DeleteOneAsync(filter);
     }
 }
