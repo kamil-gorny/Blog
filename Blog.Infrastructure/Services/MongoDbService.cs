@@ -1,10 +1,12 @@
 using Blog.Core.Models;
+using Blog.Infrastructure.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
-namespace Blog.Core.Services;
 
-public class MongoDbService<T> where T : class
+namespace Blog.Infrastructure.Services;
+
+public class MongoDbService<T> where T : Entity
 {
     private readonly IMongoCollection<T> _collection;
     

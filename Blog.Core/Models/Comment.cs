@@ -1,9 +1,10 @@
+using Blog.Infrastructure.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Blog.Core.Models;
 
-public class Comment
+public class Comment(string id) : Entity(id)
 {
     
     [BsonId]
