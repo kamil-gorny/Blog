@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Blog.Core.Models;
 
-public class Post(string id) : Entity(id)
+public class Post() : Entity()
 {
     public string Title { get; set; }
     public string Description { get; set; }

@@ -3,10 +3,11 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Blog.Infrastructure.Models;
 
-public abstract class Entity(string id)
+public abstract class Entity()
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; } = id;
-    public DateTime CreationDate { get; set; }
+    public static string Id { get; set; } = new ObjectId().ToString();
+
+    public DateTime CreationDate { get; set; } = DateTime.Now;
 }
