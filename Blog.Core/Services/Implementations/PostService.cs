@@ -26,4 +26,12 @@ public class PostService(MongoDbService<Post> mongoDbService) : IPostService
         };
         return mongoDbService.CreateAsync(post);
     }
+
+    public async Task AddComment(string id, string comment)
+    {
+        var post = await GetPostById(id);
+        post.Comments.Add(comment);
+        await mongoDbService.UpdateAsync(id, post);
+    }
+
 }
