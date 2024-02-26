@@ -17,6 +17,13 @@ public class PostController(IPostService postService) : ControllerBase
         return Ok(posts);
     }
     
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get([FromRoute] string id)
+    {
+        var post = await postService.GetPostById(id);
+        return Ok(post);
+    }
+    
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] PostRequestModel post)
     {
