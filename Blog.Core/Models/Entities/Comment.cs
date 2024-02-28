@@ -1,8 +1,6 @@
 using Blog.Infrastructure.Models;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 
-namespace Blog.Core.Models;
+namespace Blog.Core.Models.Entities;
 
 public class Comment : Entity
 {

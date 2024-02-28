@@ -1,4 +1,5 @@
 using Blog.Core.Models;
+using Blog.Core.Models.Entities;
 
 namespace Blog.Core.Services.Interfaces;
 

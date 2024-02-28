@@ -1,4 +1,4 @@
-namespace Blog.Core.Models;
+namespace Blog.Core.Models.Entities;
 
 public class Role
 {

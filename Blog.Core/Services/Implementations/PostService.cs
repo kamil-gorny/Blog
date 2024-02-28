@@ -1,4 +1,5 @@
 using Blog.Core.Models;
+using Blog.Core.Models.Entities;
 using Blog.Core.Services.Interfaces;
 using Blog.Infrastructure.Services;
 

@@ -1,6 +1,6 @@
 using Blog.Infrastructure.Models;
 
-namespace Blog.Core.Models;
+namespace Blog.Core.Models.Entities;
 
 public class User : Entity
 {

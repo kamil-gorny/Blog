@@ -1,6 +1,8 @@
 using Blog.Core.Models;
-using Blog.Models.Dtos;
 using AutoMapper;
+using Blog.Core.Models.Dtos;
+using Blog.Core.Models.Entities;
+
 namespace Blog;
 
 public class BlogMappingProfile : Profile

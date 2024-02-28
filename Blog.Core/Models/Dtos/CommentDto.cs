@@ -1,4 +1,4 @@
-namespace Blog.Models.Dtos;
+namespace Blog.Core.Models.Dtos;
 
 public class CommentDto
 {

@@ -1,8 +1,8 @@
+using Blog.Core.Models.Dtos;
 using Blog.Core.Services.Interfaces;
 using Blog.Infrastructure.Models;
 using Blog.Infrastructure.Services;
 using Blog.Models;
-using Blog.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Controllers;
