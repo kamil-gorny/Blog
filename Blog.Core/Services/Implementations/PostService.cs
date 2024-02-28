@@ -1,11 +1,13 @@
+using AutoMapper;
 using Blog.Core.Models;
+using Blog.Core.Models.Dtos;
 using Blog.Core.Models.Entities;
 using Blog.Core.Services.Interfaces;
 using Blog.Infrastructure.Services;
 
 namespace Blog.Core.Services.Implementations;
 
-public class PostService(MongoDbService<Post> mongoDbService) : IPostService
+public class PostService(MongoDbService<Post> mongoDbService, IMapper mapper) : IPostService
 {
     public Task<List<Post>> GetPosts()
     {
@@ -17,14 +19,9 @@ public class PostService(MongoDbService<Post> mongoDbService) : IPostService
         return mongoDbService.GetByIdAsync(id);
     }
    
-    public Task CreatePost(string title, string description, string content)
+    public Task CreatePost(CreatePostDto postDto)
     {
-        var post = new Post
-        {
-            Title = title,
-            Description = description,
-            Content = content
-        };
+        var post = mapper.Map<Post>(postDto);
         return mongoDbService.CreateAsync(post);
     }
 
