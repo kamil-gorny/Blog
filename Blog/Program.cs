@@ -11,6 +11,7 @@ builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("Mo
 builder.Services.AddSingleton<MongoDbService<Post>>();
 builder.Services.AddSingleton<MongoDbService<Comment>>();
 builder.Services.AddScoped<IPostService, PostService>();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddControllers();
 var app = builder.Build();
 

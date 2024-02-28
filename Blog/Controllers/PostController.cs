@@ -2,6 +2,7 @@ using Blog.Core.Services.Interfaces;
 using Blog.Infrastructure.Models;
 using Blog.Infrastructure.Services;
 using Blog.Models;
+using Blog.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Controllers;
@@ -25,7 +26,7 @@ public class PostController(IPostService postService) : ControllerBase
     }
     
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] PostRequestModel post)
+    public async Task<IActionResult> Post([FromBody] CreatePostDto post)
     {
         await postService.CreatePost(post.Title, post.Description, post.Content);
         return CreatedAtAction(nameof(Get), new {id = Entity.Id}, post);

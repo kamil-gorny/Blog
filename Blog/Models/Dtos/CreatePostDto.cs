@@ -1,8 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Blog.Models.Dtos;
 
-public class PostDto
+public class CreatePostDto
 {
+    [Required]
     public string Title { get; set; } = null!;
+    [Required]
     public string Description { get; set; } = null!;
+    [Required]
     public string Content { get; set; } = null!;
 }
