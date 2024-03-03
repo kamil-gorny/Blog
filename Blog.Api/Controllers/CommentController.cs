@@ -1,8 +1,8 @@
-using Blog.Core.Models.Dtos;
-using Blog.Core.Services.Interfaces;
+using Blog.Domain.Models.Dtos;
+using Blog.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blog.Controllers;
+namespace Blog.Api.Controllers;
 
 [ApiController]
 public class CommentController : ControllerBase

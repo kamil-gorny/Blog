@@ -1,6 +1,6 @@
-using Blog.Core.Models.Dtos;
+using Blog.Domain.Models.Dtos;
 
-namespace Blog.Core.Services.Interfaces;
+namespace Blog.Domain.Services.Interfaces;
 
 public interface ICommentService
 {

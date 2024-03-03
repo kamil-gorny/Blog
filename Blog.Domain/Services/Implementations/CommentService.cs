@@ -1,6 +1,6 @@
-using Blog.Core.Models.Dtos;
+using Blog.Domain.Models.Dtos;
 
-namespace Blog.Core.Services.Implementations;
+namespace Blog.Domain.Services.Implementations;
 
 public class CommentService
 {

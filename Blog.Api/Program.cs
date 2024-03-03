@@ -1,7 +1,7 @@
 using Blog.Core.Models;
-using Blog.Core.Models.Entities;
-using Blog.Core.Services.Implementations;
-using Blog.Core.Services.Interfaces;
+using Blog.Domain.Models.Entities;
+using Blog.Domain.Services.Implementations;
+using Blog.Domain.Services.Interfaces;
 using Blog.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,6 +1,8 @@
-namespace Blog.Core.Models.Dtos;
+using Blog.Infrastructure.Models;
 
-public class CommentDto
+namespace Blog.Domain.Models.Entities;
+
+public class Comment : Entity
 {
     public string PostId { get; set; } = null!;
     public string Author { get; set; } = null!;

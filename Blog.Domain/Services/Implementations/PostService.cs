@@ -1,11 +1,11 @@
 using AutoMapper;
-using Blog.Core.Models;
-using Blog.Core.Models.Dtos;
-using Blog.Core.Models.Entities;
-using Blog.Core.Services.Interfaces;
+using Blog.Domain.Models;
+using Blog.Domain.Models.Dtos;
+using Blog.Domain.Models.Entities;
+using Blog.Domain.Services.Interfaces;
 using Blog.Infrastructure.Services;
 
-namespace Blog.Core.Services.Implementations;
+namespace Blog.Domain.Services.Implementations;
 
 public class PostService(MongoDbService<Post> mongoDbService, IMapper mapper) : IPostService
 {

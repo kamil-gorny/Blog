@@ -1,7 +1,7 @@
-using Blog.Core.Models;
+using Blog.Domain.Models;
 using AutoMapper;
-using Blog.Core.Models.Dtos;
-using Blog.Core.Models.Entities;
+using Blog.Domain.Models.Dtos;
+using Blog.Domain.Models.Entities;
 
 namespace Blog;
 

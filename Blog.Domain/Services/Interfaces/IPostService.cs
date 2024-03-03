@@ -1,8 +1,8 @@
-using Blog.Core.Models;
-using Blog.Core.Models.Dtos;
-using Blog.Core.Models.Entities;
+using Blog.Domain.Models;
+using Blog.Domain.Models.Dtos;
+using Blog.Domain.Models.Entities;
 
-namespace Blog.Core.Services.Interfaces;
+namespace Blog.Domain.Services.Interfaces;
 
 public interface IPostService
 {
