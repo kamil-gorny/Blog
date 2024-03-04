@@ -1,6 +1,5 @@
 using Blog.Domain.Models.Dtos;
 using Blog.Domain.Services.Interfaces;
-using Blog.Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Api.Controllers;
