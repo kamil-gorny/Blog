@@ -1,53 +1,59 @@
 <script>
-	import Header from './Header.svelte';
-	import '../app.css';
+	import GoSearch from 'svelte-icons/go/GoSearch.svelte'
 </script>
+<nav>
+	<a href="/" class="logo">kamilgorny.dev</a>
+	<div class="navigation-items">
+		<a href="/">Home</a>
+		<a href="/about">About</a>
+		<a href="/contact">Contact</a>
+	</div>
+	<div class="search">Search<div class="icon"><GoSearch /></div></div>
+</nav>	
 
-<div class="app">
-	<Header />
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
+<main>
+	<slot></slot>
+</main>
 
 <style>
-	.app {
+	.search{
 		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
+		justify-content: space-between;
+		gap:4px;
+		font-size: 18px;
 	}
+	.icon{
+		padding-top: 2px;
+		width: 18px;
+		height: 18px;
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
 	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
+	.logo{
 		font-weight: bold;
+		font-size:25px;
 	}
+	*{
+		font-family: "Poppins", sans-serif;
+	}
+	nav{
+		font-weight: 400;
+		margin: 0 auto;
+		padding: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+.navigation-items{
+	font-size: 18px;
+	flex-direction: row;
+	display: flex;
+	gap: 36px;
+	justify-content: space-between;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
 </style>
