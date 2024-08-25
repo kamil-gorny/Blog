@@ -54,6 +54,9 @@
 a{
 	color: black;
 	text-decoration: none;
+	display: flex; /* CSS3 */
+  align-items: center; /* Vertical align */
+  justify-content: center; /* Horizontal align */
 }
 
 </style>

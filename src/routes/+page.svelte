@@ -1,25 +1,63 @@
 <script>
 	import mainImage from '$lib/images/mainimage.jpg';
+
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => ready = true);
+	function typewriter(node, { speed = 1 }) {
+	const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
+
+	if (!valid) {
+		throw new Error(`This transition only works on elements with a single text node child`);
+	}
+
+	const text = node.textContent;
+	const duration = text.length / (speed * 0.01);
+
+	return {
+		duration,
+		tick: (t) => {
+			const i = Math.trunc(text.length * t);
+			node.textContent = text.slice(0, i);
+		}
+	};
+}
 </script>
 
-
-<!-- <img src="{digital}" alt=""/> -->
-
 <main>
+	
 	<div class="header-container">
-		<span class="header-main">Hi, I am Kamil.</span>
-		<span class="header-sub">Web developer and cybersec enthusiast.</span>	
+		{#if ready}
+		<span transition:typewriter class="header-main">Hi, I am Kamil.</span>
+		<span transition:typewriter class="header-sub">Web developer and cybersec enthusiast.</span>	
+		{/if}
 	</div>	
-	<img class="hero" src="{mainImage}" alt="">
+
+	<div class="hero">
+		<img src="{mainImage}" alt="">
+	</div>
 </main>
 
 <style>
+	img{
+		max-height: 528px;
+		max-width: 981px;
+		border-radius: 10px;
+		box-shadow: 0px 44px 34px 0px rgba(0, 0, 0, 0.25);
+	}
 	.hero{
+		margin-left: auto;
+		margin-right: auto;
 		width: 981px;
 		height: 528px;
+
 	}
 	main{
 		text-align: center;
+	}
+	p{
+		padding: 0;
 	}
 	.header-main{
 		font-size: 53px;
