@@ -37,6 +37,13 @@
 	<div class="hero">
 		<img src="{mainImage}" alt="">
 	</div>
+
+	<div class="latest-posts">
+		<div>
+			Latest posts
+		</div>
+		
+	</div>
 </main>
 
 <style>
