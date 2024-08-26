@@ -1,5 +1,7 @@
 <script>
 	export let data;
+	import IoIosArrowBack from 'svelte-icons/io/IoIosArrowBack.svelte'
+	import FaRegCopyright from 'svelte-icons/fa/FaRegCopyright.svelte'
 	import mainImage from '$lib/images/mainimage.jpg';
 
 	import { onMount } from 'svelte';
@@ -40,23 +42,56 @@
 	</div>
 
 	<div class="latest-posts">
-		<div>
+		<p class="latest-posts-header">
 			Latest posts
-		</div>
+		</p>
 		{#each data.posts as { title, content, date }}
 		<li>
 			<a href="/blog/{title}">{title}</a>
 			<span>{date}</span>
-		</li><hr>
+		</li>
+		<hr>
 		{/each}
 	</div>
+	<div class="older">
+		<div class="icon"><IoIosArrowBack/></div>
+		
+		<p>View Older Posts</p>
+		</div>
 </main>
-
+<footer>
+	<div class="footer-icon">
+		<FaRegCopyright />
+	</div>
+</footer>
 <style>
+	footer{
+		text-align: center;
+		justify-content: center;
+		margin: auto;
+	}
+	.footer-icon{
+		height: 17px;
+		width: 17px;
+	}
+	.icon{
+		align-self: center;
+		height: 22px;
+		padding-right: 12px;
+		width: 22px;
+	}
+	.older{
+		padding-top: 39px;
+		display: flex;
+		flex-direction: row;
+		font-size: 22px;
+		color: #7E7E7E;
+	}
 	li{
 		font-size: 22px;
 		list-style: none;
 		display: flex;
+		padding-top: 33px;
 		justify-content: space-between;
 	}
 	li span{
@@ -74,6 +109,8 @@
 		box-shadow: 0px 44px 34px 0px rgba(0, 0, 0, 0.25);
 	}
 	.hero{
+		display: flex;
+		justify-content: center;
 		margin-left: auto;
 		margin-right: auto;
 		width: 981px;
@@ -81,7 +118,7 @@
 
 	}
 	main{
-		text-align: center;
+
 		margin:auto;
 		width: 60%;
 	}
@@ -97,7 +134,18 @@
 		font-size: 28px;
 		font-family: "Inter", sans-serif;
 	}
+	.latest-posts{
+		padding-top:81px;
+		
+	}
+
+	.latest-posts-header{
+		font-size: 32px;
+		padding-bottom: 37px;
+		
+	}
 	.header-container{
+		text-align: center;
 		padding-top:72px;
 		padding-bottom: 81px;
 		display: flex;
