@@ -1,4 +1,5 @@
 <script>
+	export let data;
 	import mainImage from '$lib/images/mainimage.jpg';
 
 	import { onMount } from 'svelte';
@@ -42,11 +43,30 @@
 		<div>
 			Latest posts
 		</div>
-		
+		{#each data.posts as { title, content, date }}
+		<li>
+			<a href="/blog/{title}">{title}</a>
+			<span>{date}</span>
+		</li><hr>
+		{/each}
 	</div>
 </main>
 
 <style>
+	li{
+		font-size: 22px;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+	}
+	li span{
+		color: #7E7E7E;
+	}
+	li a{
+		text-decoration: none;
+		color: #000;
+		padding-bottom: 35px;
+	}
 	img{
 		max-height: 528px;
 		max-width: 981px;
@@ -62,10 +82,13 @@
 	}
 	main{
 		text-align: center;
+		margin:auto;
+		width: 60%;
 	}
-	p{
-		padding: 0;
+	hr{
+		color:#E4E4E4;
 	}
+
 	.header-main{
 		font-size: 53px;
 		font-weight: 600;
@@ -81,4 +104,5 @@
 		flex-direction: column;
 		gap:12px;
 	}
+	
 </style>
