@@ -107,14 +107,15 @@
 		max-width: 981px;
 		border-radius: 10px;
 		box-shadow: 0px 44px 34px 0px rgba(0, 0, 0, 0.25);
+		
 	}
 	.hero{
-		display: flex;
-		justify-content: center;
-		margin-left: auto;
-		margin-right: auto;
 		width: 981px;
 		height: 528px;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		align-content: center;
 
 	}
 	main{

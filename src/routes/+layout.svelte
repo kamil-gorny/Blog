@@ -1,6 +1,5 @@
-<script>
-	import GoSearch from 'svelte-icons/go/GoSearch.svelte'
-</script>
+<script>import "../app.css";
+import GoSearch from 'svelte-icons/go/GoSearch.svelte'</script>
 <nav>
 	<a href="/" class="logo">kamilgorny.dev</a>
 	<div class="navigation-items">
@@ -8,7 +7,7 @@
 		<a href="/about">About</a>
 		<a href="/contact">Contact</a>
 	</div>
-	<div class="search">Search<div class="icon"><GoSearch /></div></div>
+	<a href="/signup" class="search">Sign up</a>
 </nav>	
 
 
