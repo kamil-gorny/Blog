@@ -1,5 +1,5 @@
 <script>
-	import "../app.css";
+	import "../../app.css";
 	import { onMount } from "svelte";
 	import GoSearch from "svelte-icons/go/GoSearch.svelte";
 	import { initializeApp } from "firebase/app";
