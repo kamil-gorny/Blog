@@ -114,7 +114,7 @@
 		height: 528px;
 		display: flex;
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: autos;
 		align-content: center;
 
 	}
