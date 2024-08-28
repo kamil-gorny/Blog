@@ -4,7 +4,24 @@
         signInWithPopup,
         GoogleAuthProvider,
     } from "firebase/auth";
-    import GoMarkGithub from 'svelte-icons/go/GoMarkGithub.svelte'
+    import FaGoogle from 'svelte-icons/fa/FaGoogle.svelte'
+    import { onMount } from "svelte";
+
+	import { initializeApp } from "firebase/app";
+	import { getAnalytics } from "firebase/analytics";
+	onMount(() => {
+		const firebaseConfig = {
+			apiKey: "AIzaSyANk7hiz2HRx8_7EN_PWFp9tZQSkoZ5NYw",
+			authDomain: "blog-74819.firebaseapp.com",
+			projectId: "blog-74819",
+			storageBucket: "blog-74819.appspot.com",
+			messagingSenderId: "796437908916",
+			appId: "1:796437908916:web:36ba6d508a3ce9450736e1",
+			measurementId: "G-350TBFQTSX",
+		};
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+	});
 
     async function loginWithGoogle() {
         const provider = new GoogleAuthProvider();
@@ -44,8 +61,8 @@
             <div class="divider">
                 <p class="divider-text">OR CONTINUE WITH</p>
             </div>
-            <div class="github-button">
-               <div class="icon"><GoMarkGithub/></div>Github</div>
+            <button class="github-button" on:click={loginWithGoogle}>
+               <div class="icon"><FaGoogle/></div>Google</button>
             <p class="terms">By clicking continue, you agree to our <span class="underline">Terms<br/> of Service</span> and <span class="underline">Privacy Policy.</span></p>
         </div>
     </div>
@@ -103,6 +120,7 @@
 
     }
     .github-button{
+        background-color: #fff;
         display: flex;
         width: 350px;
         height: 36px;
@@ -112,6 +130,9 @@
         justify-content: center;
         gap:6px;
         width: 350px;
+    }
+    .github-button:hover{
+        cursor: pointer;
     }
     .login-header{
         font-weight: 600;
