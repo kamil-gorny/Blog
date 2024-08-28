@@ -5,6 +5,7 @@
 	import mainImage from '$lib/images/mainimage.jpg';
 
 	import { onMount } from 'svelte';
+	import { authStore } from '../../stores/authStore.js';
 
 	let ready = false;
 	onMount(() => ready = true);
@@ -39,7 +40,7 @@
 
 	<div class="hero">
 		<img src="{mainImage}" alt="">
-	</div>
+	</div>{console.log($authStore.isLoggedIn)}
 
 	<div class="latest-posts">
 		<p class="latest-posts-header">

@@ -4,19 +4,7 @@
 	import GoSearch from "svelte-icons/go/GoSearch.svelte";
 	import { initializeApp } from "firebase/app";
 	import { getAnalytics } from "firebase/analytics";
-	onMount(() => {
-		const firebaseConfig = {
-			apiKey: "AIzaSyANk7hiz2HRx8_7EN_PWFp9tZQSkoZ5NYw",
-			authDomain: "blog-74819.firebaseapp.com",
-			projectId: "blog-74819",
-			storageBucket: "blog-74819.appspot.com",
-			messagingSenderId: "796437908916",
-			appId: "1:796437908916:web:36ba6d508a3ce9450736e1",
-			measurementId: "G-350TBFQTSX",
-		};
-		const app = initializeApp(firebaseConfig);
-		const analytics = getAnalytics(app);
-	});
+
 </script>
 
 <nav>

@@ -3,12 +3,17 @@
         getAuth,
         signInWithPopup,
         GoogleAuthProvider,
+        onAuthStateChanged,
+
+        signOut
+
     } from "firebase/auth";
     import FaGoogle from 'svelte-icons/fa/FaGoogle.svelte'
     import { onMount } from "svelte";
 
 	import { initializeApp } from "firebase/app";
 	import { getAnalytics } from "firebase/analytics";
+    import { authStore } from "../../stores/authStore";
 	onMount(() => {
 		const firebaseConfig = {
 			apiKey: "AIzaSyANk7hiz2HRx8_7EN_PWFp9tZQSkoZ5NYw",
@@ -20,6 +25,14 @@
 			measurementId: "G-350TBFQTSX",
 		};
 		const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app)
+        auth.onAuthStateChanged((user) =>{
+            authStore.set({
+                isLoggedIn: user !== null,
+                user: user,
+                firebaseControlled: true
+            })
+        })
 		const analytics = getAnalytics(app);
 	});
 
@@ -44,6 +57,11 @@
 
             });
     }
+
+    async function signOutFromGoogle(){
+        const auth = getAuth();
+        signOut(auth);
+    }
 </script>
 
 <div class="container">
@@ -64,6 +82,7 @@
             <button class="github-button" on:click={loginWithGoogle}>
                <div class="icon"><FaGoogle/></div>Google</button>
             <p class="terms">By clicking continue, you agree to our <span class="underline">Terms<br/> of Service</span> and <span class="underline">Privacy Policy.</span></p>
+            <button on:click={signOutFromGoogle}>signout</button>
         </div>
     </div>
 </div>
