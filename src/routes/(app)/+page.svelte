@@ -46,9 +46,9 @@
 		<p class="latest-posts-header">
 			Latest posts
 		</p>
-		{#each data.posts as { title, content, date }}
+		{#each data.posts as { title, link, date }}
 		<li>
-			<a href="/blog/{title}">{title}</a>
+			<a href="/posts/{link}">{title}</a>
 			<span>{date}</span>
 		</li>
 		<hr>
