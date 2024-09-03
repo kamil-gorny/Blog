@@ -47,6 +47,7 @@
         gap: 8px;
     }
     .post-header{
+        padding-bottom: 50px;
         padding-top: 100px;
         width:80%;
         display: flex;
