@@ -21,6 +21,10 @@
 
     </div>
 </div>
+
+    <div class="content">
+        {@html marked(data.post.content)}
+    </div>
 </div>
 
 <style>
