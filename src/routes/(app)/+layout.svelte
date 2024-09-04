@@ -5,10 +5,8 @@
 </script>
 <nav>
 	<div class="navigation--left">
-		<img class="profile-pic" src="{profilePicture}" alt="profile picture"/>
-		<a href="/" class="logo">kamil-gorny</a>
+		<img src={profilePicture} alt="Profile picture" class="profile-pic"/>
 	</div>
-
 	<div class="navigation-items">
 		<a href="/">Blog</a>
 		<a href="/about">Projects</a>
@@ -26,6 +24,7 @@
 	.navigation--left{
 		display: flex;
 		flex-direction: row;
+		justify-self: start;
 		gap:10px;
 	}
 	.profile-pic{
@@ -47,23 +46,29 @@
 	}
 	nav {
 		font-weight: 400;
-		margin: 0 auto;
 		padding: 20px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	}
-	.navigation-items {
-		font-size: 16px;
+		width: 75%;
 		flex-direction: row;
 		align-items: center;
 		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-around;
+
+	}
+	.navigation-items {
+		display: flex;
+		flex-direction: row;
 		gap: 36px;
-		color: #374151;
-		justify-content: space-between;
+		color: #6E6E73;
+		font-size: 16px;
+	}
+
+	.navigation-items > a{
+		color:#6E6E73;
 	}
 	a {
-		color: #374151;
+		color: #6E6E73;
 		text-decoration: none;
 		display: flex; /* CSS3 */
 		align-items: center; /* Vertical align */
