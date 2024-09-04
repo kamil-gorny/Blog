@@ -1,10 +1,20 @@
-
+<script>
+	import profilePicture from '$lib/images/profile.jpeg';
+	import { Github } from 'lucide-svelte/icons';
+	import { Send } from 'lucide-svelte';
+</script>
 <nav>
-	<a href="/" class="logo">kamilgorny.dev</a>
+	<div class="navigation--left">
+		<img class="profile-pic" src="{profilePicture}" alt="profile picture"/>
+		<a href="/" class="logo">kamil-gorny</a>
+	</div>
+
 	<div class="navigation-items">
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/contact">Contact</a>
+		<a href="/">Blog</a>
+		<a href="/about">Projects</a>
+		<a href="/contact">CV</a>
+		<Github size="18"/>
+		<Send size="18"/>
 	</div>
 </nav>
 
@@ -13,20 +23,24 @@
 </main>
 
 <style>
-	.search {
+	.navigation--left{
 		display: flex;
-		justify-content: space-between;
-		gap: 4px;
-		font-size: 18px;
+		flex-direction: row;
+		gap:10px;
 	}
+	.profile-pic{
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+	}
+
 	.icon {
 		padding-top: 2px;
-		width: 18px;
-		height: 18px;
+		width: 16px;
+		height: 16px;
 	}
 	.logo {
-		font-weight: bold;
-		font-size: 25px;
+		font-size: 1.125rem;
 	}
 	* {
 		font-family: "Poppins", sans-serif;
@@ -40,14 +54,16 @@
 		justify-content: space-around;
 	}
 	.navigation-items {
-		font-size: 18px;
+		font-size: 16px;
 		flex-direction: row;
+		align-items: center;
 		display: flex;
 		gap: 36px;
+		color: #374151;
 		justify-content: space-between;
 	}
 	a {
-		color: black;
+		color: #374151;
 		text-decoration: none;
 		display: flex; /* CSS3 */
 		align-items: center; /* Vertical align */
