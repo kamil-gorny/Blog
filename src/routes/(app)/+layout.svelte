@@ -1,11 +1,3 @@
-<script>
-	//import "../../app.css";
-	import { onMount } from "svelte";
-	import GoSearch from "svelte-icons/go/GoSearch.svelte";
-	import { initializeApp } from "firebase/app";
-	import { getAnalytics } from "firebase/analytics";
-
-</script>
 
 <nav>
 	<a href="/" class="logo">kamilgorny.dev</a>
@@ -14,7 +6,6 @@
 		<a href="/about">About</a>
 		<a href="/contact">Contact</a>
 	</div>
-	<a href="/signup" class="search">Sign up</a>
 </nav>
 
 <main>
