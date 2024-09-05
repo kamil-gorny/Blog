@@ -2,6 +2,18 @@
 	import profilePicture from '$lib/images/profile.jpeg';
 	import { Github } from 'lucide-svelte/icons';
 	import { Send } from 'lucide-svelte';
+	import { goto } from "$app/navigation";
+
+	let iconColor = "#6E6E73";
+
+	function mouseEnter(){
+		iconColor = "#1D1D1F";
+		console.log("Mouse enter");
+	}
+
+	function mouseLeave(){
+		iconColor = "#6E6E73";
+	}
 </script>
 <nav>
 	<div class="navigation--left">
@@ -10,9 +22,13 @@
 	<div class="navigation-items">
 		<a href="/">Blog</a>
 		<a href="/about">Projects</a>
-		<a href="/contact">CV</a>
-		<Github size="18"/>
-		<Send size="18"/>
+		<a href="/contact" >CV</a>
+		<a href="/contact">
+		<Github size="18" color="{iconColor}" on:click={goto("/contact")} on:mouseup={() => {
+			console.log("test");
+			iconColor = "1D1D1F"}}/>
+		</a>
+		<Send size="18" />
 	</div>
 </nav>
 
