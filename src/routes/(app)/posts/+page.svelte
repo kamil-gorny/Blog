@@ -16,15 +16,23 @@
     {#if visible}
         <div class="latest-posts" in:fly={{ y: 200, duration: 2000 }}>
             <p class="latest-posts-header">
-                Latest posts
+                Posts
             </p>
-            {#each data.posts as { title, link, date }}
-                <li>
-                    <a href="/posts/{link}">{title}</a>
-                    <span>{date}</span>
-                </li>
-                <hr>
+            <div class="post-list">
+            {#each data.posts as {subtitle, title, link, date }}
+                <div class="post">
+                    <div class="post-left-side">
+                        <a href="/posts/{link}">{title}</a>
+                        <br>
+                        <span class="subtitle">{subtitle}</span>
+                    </div>
+                    <div class="post-right-side">
+                        <span class="date">{date}</span>
+                    </div>
+                </div>
+
             {/each}
+            </div>
         </div>
     {/if}
 
@@ -32,67 +40,51 @@
 
 <style>
 
-    li{
-        font-size: 22px;
-        list-style: none;
-        display: flex;
-        padding-top: 33px;
-        justify-content: space-between;
+    .date{
+        color: #1D1D1F;
     }
-    li span{
-        color: #7E7E7E;
+    main{
+        width: 50%;
     }
-    li a{
+     a{
+        font-size: 18px;
         text-decoration: none;
-        color: #000;
-        padding-bottom: 35px;
+        color: #3F3F46;
     }
-    img{
-        max-height: 528px;
-        max-width: 981px;
-        border-radius: 10px;
-        box-shadow: 0px 44px 34px 0px rgba(0, 0, 0, 0.25);
-
-    }
-    .hero{
-        width: 981px;
-        height: 528px;
+     .subtitle{
+         font-size: 16px;
+         color: #6E6E73;
+     }
+    .post{
+        padding-left: 20px;
+        box-sizing: border-box;
+        gap:20px;
         display: flex;
-        margin-left: auto;
-        margin-right: autos;
-        align-content: center;
+        justify-content: space-between;
 
     }
 
-    hr{
-        color:#E4E4E4;
+    .post-left-side{
+        display: flex;
+        flex-direction: column;
+    }
+    .post-list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .header-main{
-        font-size: 53px;
-        font-weight: 600;
-    }
-    .header-sub{
-        font-size: 28px;
-        font-family: "Inter", sans-serif;
-    }
+
     .latest-posts{
-        padding-top:81px;
+    padding-top: 20px;
 
     }
 
     .latest-posts-header{
+        color: #3F3F46;
         font-size: 32px;
-        padding-bottom: 37px;
+        font-weight: bold;
+    }
 
-    }
-    .header-container{
-        text-align: center;
-        padding-top:72px;
-        padding-bottom: 81px;
-        display: flex;
-        flex-direction: column;
-        gap:12px;
-    }
 
 </style>
