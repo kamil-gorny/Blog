@@ -31,7 +31,7 @@
         justify-content: center;
         gap: 5px;
         color: #F5F5F5;
-        background-color: #424245;
+        background-color: #29d;
     }
     .message{
         box-sizing: border-box;

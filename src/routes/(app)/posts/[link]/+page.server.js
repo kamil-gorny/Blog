@@ -1,4 +1,4 @@
-import { posts } from '../../data.js';
+import { posts } from '../data.js';
 import {error} from "@sveltejs/kit";
 
 export function load({ params }){

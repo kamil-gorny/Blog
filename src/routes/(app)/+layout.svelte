@@ -2,27 +2,42 @@
 	import profilePicture from '$lib/images/profile.jpeg';
 	import { Github } from 'lucide-svelte/icons';
 	import { Send } from 'lucide-svelte';
+	import { navigating } from "$app/stores";
+	import 'nprogress/nprogress.css';
+	import { fade, fly } from 'svelte/transition';
+	import NProgress from 'nprogress';
 	import { goto } from "$app/navigation";
+	import {onMount} from "svelte";
+
+	NProgress.configure({ showSpinner: false });
 
 	let iconColor = "#6E6E73";
+	let visible = false;
 
 	function mouseEnter(){
 		iconColor = "#1D1D1F";
 		console.log("Mouse enter");
 	}
-
+	onMount(() => visible = true);
 	function mouseLeave(){
 		iconColor = "#6E6E73";
+	}
+	$: {
+		if ($navigating) {
+			NProgress.start();
+		} else NProgress.done();
 	}
 </script>
 <nav>
 	<div class="navigation--left">
+		<a href="/">
 		<img src={profilePicture} alt="Profile picture" class="profile-pic"/>
+		</a>
 	</div>
 	<div class="navigation-items">
-		<a href="/">Blog</a>
+		<a href="/posts">Blog</a>
 		<a href="/about">Projects</a>
-		<a href="/contact" >CV</a>
+		<a href="/contact" >Resume</a>
 		<a href="https://github.com/kamil-gorny">
 		<Github size="18"/>
 		</a>
@@ -31,12 +46,13 @@
 		</a>
 	</div>
 </nav>
-
-<main>
+{#if visible}
+<main in:fly={{ y: 200, duration: 2000 }}>
 	<slot></slot>
 </main>
-
+{/if}
 <style>
+
 	main{
 		display: flex;
 		justify-content: center;
