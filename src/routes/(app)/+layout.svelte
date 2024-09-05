@@ -37,6 +37,10 @@
 </main>
 
 <style>
+	main{
+		display: flex;
+		justify-content: center;
+	}
 	.navigation--left{
 		display: flex;
 		flex-direction: row;
@@ -49,14 +53,7 @@
 		border-radius: 50%;
 	}
 
-	.icon {
-		padding-top: 2px;
-		width: 16px;
-		height: 16px;
-	}
-	.logo {
-		font-size: 1.125rem;
-	}
+
 	* {
 		font-family: "Poppins", sans-serif;
 	}

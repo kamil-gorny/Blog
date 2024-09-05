@@ -30,7 +30,7 @@
 </script>
 
 <main>
-	
+
 	<div class="header-container">
 		{#if ready}
 		<span transition:typewriter class="header-main">Hi, I am Kamil.</span>
@@ -38,9 +38,6 @@
 		{/if}
 	</div>	
 
-	<div class="hero">
-		<img src="{mainImage}" alt="">
-	</div>
 
 	<div class="latest-posts">
 		<p class="latest-posts-header">
@@ -60,11 +57,7 @@
 		<p>View Older Posts</p>
 		</div>
 </main>
-<footer>
-	<div class="footer-icon">
-		<FaRegCopyright />
-	</div>
-</footer>
+
 <style>
 	footer{
 		text-align: center;
@@ -119,11 +112,7 @@
 		align-content: center;
 
 	}
-	main{
 
-		margin:auto;
-		width: 60%;
-	}
 	hr{
 		color:#E4E4E4;
 	}
