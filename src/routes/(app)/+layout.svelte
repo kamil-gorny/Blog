@@ -23,12 +23,12 @@
 		<a href="/">Blog</a>
 		<a href="/about">Projects</a>
 		<a href="/contact" >CV</a>
-		<a href="/contact">
-		<Github size="18" color="{iconColor}" on:click={goto("/contact")} on:mouseup={() => {
-			console.log("test");
-			iconColor = "1D1D1F"}}/>
+		<a href="https://github.com/kamil-gorny">
+		<Github size="18"/>
 		</a>
-		<Send size="18" />
+		<a href="/contact">
+			<Send size="18" />
+		</a>
 	</div>
 </nav>
 
