@@ -64,6 +64,14 @@
 		font-size: 16px;
 	}
 
+	.navigation-items > a {
+		transition: color 0.3s ease; /* You can adjust the duration and easing */
+	}
+
+	.navigation-items > a:hover{
+		color:#1D1D1F;
+	}
+
 	.navigation-items > a{
 		color:#6E6E73;
 	}
