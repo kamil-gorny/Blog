@@ -1,8 +1,15 @@
 <script>
     import { Send } from 'lucide-svelte';
+    import { onMount } from 'svelte';
+    import {  fade } from 'svelte/transition';
+    let isVisble = false;
+
+    onMount(() => isVisble = true);
+
 </script>
 
-<div class="container">
+{#if isVisble}
+<div class="container" in:fade>
     <span class="header">Contact me</span>
     <span>If you’d like to talk to me about anything, feel free to reach out.</span>
     <div class="upper-section">
@@ -19,6 +26,7 @@
     <textarea class="message" name="message" placeholder="Message"></textarea>
     <div class="send-button"><Send size="18"/>Send</div>
 </div>
+{/if}
 
 <style>
     .send-button{

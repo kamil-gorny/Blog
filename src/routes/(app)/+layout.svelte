@@ -3,25 +3,11 @@
 	import { Github } from 'lucide-svelte/icons';
 	import { Send } from 'lucide-svelte';
 	import { navigating } from "$app/stores";
-	import 'nprogress/nprogress.css';
-	import { fade, fly } from 'svelte/transition';
+
 	import NProgress from 'nprogress';
-	import { goto } from "$app/navigation";
-	import {onMount} from "svelte";
+
 
 	NProgress.configure({ showSpinner: false });
-
-	let iconColor = "#6E6E73";
-	let visible = false;
-
-	function mouseEnter(){
-		iconColor = "#1D1D1F";
-		console.log("Mouse enter");
-	}
-	onMount(() => visible = true);
-	function mouseLeave(){
-		iconColor = "#6E6E73";
-	}
 	$: {
 		if ($navigating) {
 			NProgress.start();
@@ -31,7 +17,7 @@
 <nav>
 	<div class="navigation--left">
 		<a href="/">
-		<img src={profilePicture} alt="Profile picture" class="profile-pic"/>
+		<img src={profilePicture} alt="me" class="profile-pic"/>
 		</a>
 	</div>
 	<div class="navigation-items">
@@ -46,11 +32,11 @@
 		</a>
 	</div>
 </nav>
-{#if visible}
-<main in:fly={{ y: 200, duration: 2000 }}>
+
+<main>
 	<slot></slot>
 </main>
-{/if}
+
 <style>
 
 	main{
