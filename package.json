@@ -8,6 +8,7 @@
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^5.0.0",
+		"@iconify/svelte": "^4.0.2",
 		"@neoconfetti/svelte": "^2.0.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
@@ -19,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"iconify": "^1.4.0",
 		"lucide-svelte": "^0.438.0",
 		"marked": "^14.1.0",
 		"nprogress": "^0.2.0",
