@@ -23,7 +23,7 @@
 	<div class="navigation-items">
 		<a href="/posts">Blog</a>
 		<a href="/about">Projects</a>
-		<a href="/contact" >Resume</a>
+		<a href="/resume" >Resume</a>
 		<a href="https://github.com/kamil-gorny">
 		<Github size="18"/>
 		</a>
