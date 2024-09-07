@@ -1,9 +1,15 @@
 <script>
 import TechnologyButton  from "../../TechnologyButton.svelte";
+import { fade } from 'svelte/transition';
+import {onMount} from "svelte";
+let isVisible = false;
 
+onMount(() =>{
+    isVisible = true;
+})
 </script>
-
-<div class="container">
+{#if isVisible}
+<div class="container" in:fade>
     <span class="header">Kamil Górny</span>
    <p>I’m a software engineer specializing in .NET and C#.</p>
     <div>Things I work with:   <TechnologyButton name="Linkedin" icon="akar-icons:linkedin-fill"/></div>
@@ -18,7 +24,7 @@ import TechnologyButton  from "../../TechnologyButton.svelte";
 
     Or mail me at contact@kamilgorny.dev
 </div>
-
+    {/if}
 
 <style>
     .header{
