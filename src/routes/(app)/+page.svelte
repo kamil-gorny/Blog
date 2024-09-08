@@ -12,7 +12,20 @@ onMount(() =>{
 <div class="container" in:fade>
     <span class="header">Kamil Górny</span>
    <p>I’m a software engineer specializing in .NET and C#.</p>
-    <div>Things I work with:   <TechnologyButton name="Linkedin" icon="akar-icons:linkedin-fill"/></div>
+    <div class="technologies">
+        <div>Things I work with:
+            <TechnologyButton name=".Net" icon="skill-icons:dotnet"/>
+            <TechnologyButton name="C#" icon="devicon:csharp"/>
+        </div>
+        <div>Cloud expertise:
+            <TechnologyButton name="Azure" icon="devicon:azure"/>
+        </div>
+        <div>Frontend:
+            <TechnologyButton name="Svelte" icon="devicon:svelte"/>
+            <TechnologyButton name="Flutter" icon="logos:flutter"/>
+            <TechnologyButton name="Figma" icon="logos:figma"/>
+        </div>
+    </div>
 <p>
        Outside of programming I have a strong passion for cybersecurity and actively participate in bug bounty programs during my free time. My focus is on building secure and scalable systems that empower developers to create with confidence.
 
@@ -27,6 +40,11 @@ onMount(() =>{
     {/if}
 
 <style>
+    .technologies{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
     .header{
         font-size: 32px;
         font-weight: 700;
@@ -38,7 +56,6 @@ onMount(() =>{
         align-self: center;
         flex-direction: column;
         display: flex;
-        gap:10px;
         width: 50%;
     }
 

@@ -4,21 +4,22 @@
     export let name;
 </script>
 
-<div class="test">
+<div class="container">
     <Icon {icon}/>
-    <p>{name}</p>
+    <span class="name">{name}</span>
 </div>
 
 <style>
-    .test{
+    .container{
+        gap:0.25rem;
+        padding: 4px 6px;
         display: inline-flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-color: #eee;
-        border-radius: 5px;
-
-
-
+        background-color: #88888822;
+        color: #888888;
+        border-radius: .25rem;
     }
+
 </style>
