@@ -2,6 +2,7 @@
 import TechnologyButton  from "../../TechnologyButton.svelte";
 import { fade } from 'svelte/transition';
 import {onMount} from "svelte";
+import SocialsButton from "../../SocialsButton.svelte";
 let isVisible = false;
 
 onMount(() =>{
@@ -26,20 +27,41 @@ onMount(() =>{
             <TechnologyButton name="Figma" icon="logos:figma"/>
         </div>
     </div>
+    <hr>
 <p>
-       Outside of programming I have a strong passion for cybersecurity and actively participate in bug bounty programs during my free time. My focus is on building secure and scalable systems that empower developers to create with confidence.
-
+       Outside of programming I have a strong passion for cybersecurity and actively participate in bug bounty programs during my free time.
+    <br><br>My focus is on building secure and scalable systems that empower developers to create with confidence.
+    <br><br>
        I’m currently based in Gdańsk, Poland.
 
    </p>
+    <hr>
     <p>Find me on</p>
-
+    <div class="socials">
+        <SocialsButton name="Github" icon="mdi:github"/>
+        <SocialsButton name="Hackerone" icon="cib:hackerone" href="https://hackerone.com/"/>
+        <SocialsButton name="Twitter" icon="prime:twitter"/>
+        <SocialsButton name="Linkedin" icon="mdi:linkedin"/>
+        <SocialsButton name="Youtube" icon="mdi:youtube"/>
+        <SocialsButton name="Youtube" icon="mdi:instagram"/>
+    </div>
 
     Or mail me at contact@kamilgorny.dev
+    <hr>
 </div>
     {/if}
 
 <style>
+    hr{
+        width: 50px;
+        margin-top: 20px;
+        border: 0.5px solid #E8E8ED;
+    }
+    .socials{
+        display: flex;
+        gap: 15px;
+        padding-bottom: 20px;
+    }
     .technologies{
         display: flex;
         flex-direction: column;
@@ -50,8 +72,10 @@ onMount(() =>{
         font-weight: 700;
     }
     .container{
+        font-family: "Poppins", sans-serif;
         padding-top: 50px;
-        color: #1D1D1F;
+        color: #555555;
+        font-size: 16px;
         justify-content: center;
         align-self: center;
         flex-direction: column;
