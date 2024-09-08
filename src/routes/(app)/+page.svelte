@@ -46,8 +46,8 @@ onMount(() =>{
         <SocialsButton name="Youtube" icon="mdi:instagram"/>
     </div>
 
-    Or mail me at contact@kamilgorny.dev
-    <hr>
+    <p>Or mail me at contact@kamilgorny.dev</p>
+
 </div>
     {/if}
 
