@@ -2,7 +2,9 @@
 #nprogress {
     pointer-events: none;
 }
-
+body{
+    background-color: #fdfdfd;
+}
 #nprogress .bar {
     background: #3F3F46;
 
