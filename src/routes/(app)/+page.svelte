@@ -72,7 +72,7 @@ onMount(() =>{
         font-weight: 700;
     }
     .container{
-        font-family: "Poppins", sans-serif;
+        font-family: "Inter", sans-serif;
         padding-top: 50px;
         color: #555555;
         font-size: 16px;

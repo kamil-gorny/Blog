@@ -36,9 +36,18 @@
 <main>
 	<slot></slot>
 </main>
-
+<footer>
+	<p>Copyright © 2024 Kamil Górny. All Rights Reserved</p>
+</footer>
 <style>
-
+	footer{
+		font-size: 14px;
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+	}
 	main{
 		display: flex;
 		justify-content: center;
