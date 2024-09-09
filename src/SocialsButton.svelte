@@ -5,22 +5,13 @@
     export let href;
 </script>
 
-<a href="{href}" class="container">
+<a href="{href}" class="inline-flex justify-center items-center border-b-gray-200 gap-1 text-lg border-b border-gray-200 hover:border-gray-600">
     <Icon {icon} />
     <span class="name">{name}</span>
 </a>
 
 <style>
-    .container{
-        border-bottom: 2px solid #E8E8ED;
-        font-size: 18px;
-        gap:5px;
-        padding: 4px 0;
-        display: inline-flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+
     .container:hover{
         border-bottom: 1px solid #1D1D1F;
         cursor: pointer;
