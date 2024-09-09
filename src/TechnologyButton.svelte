@@ -4,22 +4,7 @@
     export let name;
 </script>
 
-<div class="container">
+<div class="inline-flex gap-0.5 flex-row items-center justify-center bg-gray-100 rounded pl-1 pr-1">
     <Icon {icon}/>
     <span class="name">{name}</span>
 </div>
-
-<style>
-    .container{
-        gap:0.25rem;
-        padding: 4px 6px;
-        display: inline-flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        background-color: #88888822;
-        color: #888888;
-        border-radius: .25rem;
-    }
-
-</style>

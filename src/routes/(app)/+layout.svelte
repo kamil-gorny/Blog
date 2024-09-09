@@ -3,7 +3,7 @@
 	import { Github } from 'lucide-svelte/icons';
 	import { Send } from 'lucide-svelte';
 	import { navigating } from "$app/stores";
-
+	import "$lib/app.css";
 	import NProgress from 'nprogress';
 
 

@@ -37,7 +37,7 @@ onMount(() =>{
    </p>
     <hr>
     <p>Find me on</p>
-    <div class="socials">
+    <div class="socials flex">
         <SocialsButton name="Github" icon="mdi:github"/>
         <SocialsButton name="Hackerone" icon="cib:hackerone" href="https://hackerone.com/"/>
         <SocialsButton name="Twitter" icon="prime:twitter"/>
@@ -63,7 +63,7 @@ onMount(() =>{
         padding-bottom: 20px;
     }
     .technologies{
-        display: flex;
+
         flex-direction: column;
         gap: 5px;
     }
