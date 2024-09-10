@@ -1,9 +1,6 @@
 <script>
-    import {backOut, cubicOut, sineInOut} from "svelte/easing";
     import {fade} from "svelte/transition";
     import { onMount } from 'svelte';
-
-
     export let data;
     let visible = false;
 
