@@ -11,7 +11,7 @@
         <div class="pt-5">
             <p class="text-prime font-semibold text-3xl pb-6">Posts</p>
             <div class="flex flex-col gap-7">
-                {#each data.posts as {subtitle, title, link, date }, index}
+                {#each data.posts as {subtitle, title, link, date }}
                     {#if visible}
                     <div class="flex justify-between gap-5 pl-5" in:fade>
                         <div class="flex flex-col">
