@@ -7,68 +7,23 @@
     onMount(() => visible = true);
 </script>
 
-<main>
-
-        <div class="latest-posts">
-            <p class="latest-posts-header">Posts</p>
-            <div class="post-list">
+<div class="w-1/2">
+        <div class="pt-5">
+            <p class="text-prime font-semibold text-3xl pb-6">Posts</p>
+            <div class="flex flex-col gap-7">
                 {#each data.posts as {subtitle, title, link, date }, index}
                     {#if visible}
-                    <div class="post" in:fade>
-                        <div class="post-left-side">
-                            <a href="/posts/{link}">{title}</a>
+                    <div class="flex justify-between gap-5 pl-5" in:fade>
+                        <div class="flex flex-col">
+                            <a class="no-underline text-sm" href="/posts/{link}">{title}</a>
                             <br>
-                            <span class="subtitle">{subtitle}</span>
+                            <span class="text-gray-500">{subtitle}</span>
                         </div>
-                        <div class="post-right-side">
-                            <span class="date">{date}</span>
-                        </div>
+                        <span class="text-gray-500">{date}</span>
                     </div>
                     {/if}
                 {/each}
             </div>
         </div>
+</div>
 
-</main>
-
-<style>
-    .date {
-        color: #1D1D1F;
-    }
-    main {
-        width: 50%;
-    }
-    a {
-        font-size: 18px;
-        text-decoration: none;
-        color: #3F3F46;
-    }
-    .subtitle {
-        font-size: 16px;
-        color: #6E6E73;
-    }
-    .post {
-        padding-left: 20px;
-        box-sizing: border-box;
-        gap: 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .post-left-side {
-        display: flex;
-        flex-direction: column;
-    }
-    .post-list {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .latest-posts {
-        padding-top: 20px;
-    }
-    .latest-posts-header {
-        color: #3F3F46;
-        font-size: 32px;
-        font-weight: bold;
-    }
-</style>
