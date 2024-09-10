@@ -20,11 +20,12 @@
     </div>
     <label class="text-area-label" for="message">Message</label>
     <textarea class="message" name="message" placeholder="Message"></textarea>
-    <div class="send-button"><Send size="18"/>Send</div>
+    <div class="flex w-24 h-11 self-end items-center justify-center bg-indigo-500 text-gray-200 gap-1 rounded"><Send size="18"/>Send</div>
 </div>
 {/if}
 
 <style>
+
     .header{
         color: #424245;
         font-weight: bold;
@@ -32,18 +33,7 @@
         padding-bottom: 36px;
 
     }
-    .send-button{
-        width: 105px;
-        height: 44px;
-        border-radius: 8px;
-        align-self: end;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        color: #F5F5F5;
-        background-color: #29d;
-    }
+
     .message{
         box-sizing: border-box;
         padding:10px;
