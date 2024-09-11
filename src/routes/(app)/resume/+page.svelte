@@ -2,8 +2,8 @@
     import SocialsButton from "../../../SocialsButton.svelte";
 </script>
 
-<div class="container">
-    <div class="name-header">
+<div class="w-1/2">
+    <div class="flex flex-row justify-between items-center">
         <h1 class="header">Kamil Górny</h1>
         <div class="socials">
         <SocialsButton name="Github" icon="mdi:github" href="https://github.com/kamil-gorny"/>
@@ -30,15 +30,3 @@
 
         I’m currently based in Gdańsk, Poland.</p>
 </div>
-
-<style>
-    .container{
-        width: 50%;
-    }
-    .name-header{
-        display: flex;
-        flex-display: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-</style>
