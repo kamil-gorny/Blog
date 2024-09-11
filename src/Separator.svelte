@@ -1,0 +1,1 @@
+<hr class="w-1/12 mt-5 flex self-center border-b">
