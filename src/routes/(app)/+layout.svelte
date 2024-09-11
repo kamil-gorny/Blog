@@ -14,13 +14,13 @@
 		} else NProgress.done();
 	}
 </script>
-<nav>
-	<div class="navigation--left">
+<nav class="w-3/4 flex p-5 flex-row justify-around items-center ml-auto mr-auto">
+	<div class="flex flex-row justify-self-start gap-2.5">
 		<a href="/">
-		<img src={profilePicture} alt="me" class="profile-pic"/>
+		<img src={profilePicture} alt="me" class="w-8 h-8 rounded-3xl"/>
 		</a>
 	</div>
-	<div class="navigation-items">
+	<div class="flex flex-row gap-9">
 		<a href="/posts">Blog</a>
 		<a href="/about">Projects</a>
 		<a href="/resume" >Resume</a>
@@ -33,77 +33,10 @@
 	</div>
 </nav>
 
-<main>
+<main class="flex justify-center">
 	<slot></slot>
 </main>
-<footer>
+<footer class="mt-12 flex justify-center items-center p-8">
 	<p>Copyright © 2024 Kamil Górny. All Rights Reserved</p>
 </footer>
-<style>
-	footer{
-		font-size: 14px;
-		margin-top: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 30px;
-	}
-	main{
-		display: flex;
-		justify-content: center;
-	}
-	.navigation--left{
-		display: flex;
-		flex-direction: row;
-		justify-self: start;
-		gap:10px;
-	}
-	.profile-pic{
-		width: 32px;
-		height: 32px;
-		border-radius: 50%;
-	}
 
-
-	* {
-		font-family: "Poppins", sans-serif;
-	}
-	nav {
-		font-weight: 400;
-		padding: 20px;
-		width: 75%;
-		flex-direction: row;
-		align-items: center;
-		display: flex;
-		margin-left: auto;
-		margin-right: auto;
-		justify-content: space-around;
-
-	}
-	.navigation-items {
-		display: flex;
-		flex-direction: row;
-		gap: 36px;
-		color: #6E6E73;
-		font-size: 16px;
-	}
-
-	.navigation-items > a {
-		transition: color 0.3s ease; /* You can adjust the duration and easing */
-	}
-
-	.navigation-items > a:hover{
-		color:#1D1D1F;
-	}
-
-	.navigation-items > a{
-		color:#6E6E73;
-	}
-	a {
-		color: #6E6E73;
-		text-decoration: none;
-		display: flex; /* CSS3 */
-		align-items: center; /* Vertical align */
-		justify-content: center; /* Horizontal align */
-	}
-</style>
