@@ -1,32 +1,29 @@
 <script>
     import SocialsButton from "../../../SocialsButton.svelte";
+    import Icon from "@iconify/svelte";
 </script>
 
-<div class="w-1/2">
-    <div class="flex flex-row justify-between items-center">
-        <h1 class="header">Kamil Górny</h1>
-        <div class="socials">
-        <SocialsButton name="Github" icon="mdi:github" href="https://github.com/kamil-gorny"/>
-        <SocialsButton name="Linkedin" icon="mdi:linkedin" href="https://github.com/kamil-gorny"/>
+
+    <div class="flex-row justify-between items-center w-1/2 mt-10">
+        <h1 class="font-bold text-2xl mb-5">Kamil Górny</h1>
+        <p>Software Engineer with passion for creating secure web apps </p>
+        <p class="flex flex-row items-center pt-3"><Icon icon="mdi:location"/> Gdańsk, Poland</p>
+        <div class="pt-7 flex flex-row justify-items-start gap-4">
+            <SocialsButton name="Github" icon="mdi:github"/>
+            <SocialsButton name="Linkedin" icon="mdi:linkedin"/>
+            <SocialsButton name="Hackerone" icon="simple-icons:hackerone"/>
         </div>
+
+        <h1 class="mt-10 font-bold text-2xl">Work experience</h1>
+
+        <div class="rounded overflow-hidden border border-gray-600">
+            <div class="px-1.5 py-4">
+                <div class="font-bold text-xl mb-2">Nsure - Tech lead</div>
+                <p class="text-gray-700 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                </p>
+            </div>
+
+        </div>
+
     </div>
-    <p>I’m a software engineer specializing in .NET and C#.
-
-        Things I work with:
-        .Net
-
-        C#
-        Cloud expertise:
-        Azure
-        Frontend:
-        Svelte
-
-        Flutter
-
-        Figma
-        Outside of programming I have a strong passion for cybersecurity and actively participate in bug bounty programs during my free time.
-
-        My focus is on building secure and scalable systems that empower developers to create with confidence.
-
-        I’m currently based in Gdańsk, Poland.</p>
-</div>
