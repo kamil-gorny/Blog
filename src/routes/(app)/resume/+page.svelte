@@ -5,18 +5,22 @@
 
 
     <div class="flex-row justify-between items-center w-1/2 mt-10">
-        <h1 class="font-bold text-2xl mb-5">Kamil Górny</h1>
-        <p>Software Engineer with passion for creating secure web apps </p>
-        <p class="flex flex-row items-center pt-3"><Icon icon="mdi:location"/> Gdańsk, Poland</p>
-        <div class="pt-7 flex flex-row justify-items-start gap-4">
-            <SocialsButton name="Github" icon="mdi:github"/>
-            <SocialsButton name="Linkedin" icon="mdi:linkedin"/>
-            <SocialsButton name="Hackerone" icon="simple-icons:hackerone"/>
+        <div class="flex flex-row justify-between items-start">
+            <h1 class="font-bold text-2xl mb-5">Kamil Górny</h1>
+            <div class="flex flex-row items-center gap-4">
+                <SocialsButton name="Github" icon="mdi:github"/>
+                <SocialsButton name="Linkedin" icon="mdi:linkedin"/>
+
+            </div>
         </div>
+        <p class="flex flex-row items-center pt-3"><Icon icon="mdi:location"/> Gdańsk, Poland</p>
+        <p>Software Engineer with passion for creating secure web apps </p>
+
+
 
         <h1 class="mt-10 font-bold text-2xl">Work experience</h1>
 
-        <div class="rounded overflow-hidden border border-gray-600">
+        <div class="rounded overflow-hidden border shadow">
             <div class="px-1.5 py-4">
                 <div class="font-bold text-xl mb-2">Nsure - Tech lead</div>
                 <p class="text-gray-700 text-base">
