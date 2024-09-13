@@ -18,11 +18,17 @@
 
 
 
-        <h1 class="mt-10 font-bold text-2xl">Work experience</h1>
+        <h1 class="mt-10 font-bold text-2xl mb-7">Work experience</h1>
 
         <div class="rounded overflow-hidden border shadow">
             <div class="px-1.5 py-4">
-                <div class="font-bold text-xl mb-2">Nsure - Tech lead</div>
+                <div class="flex flex-row justify-between">
+                <div>
+                <div class="font-bold text-xl">Nsure</div>
+                <div class="">Tech lead</div>
+                </div>
+                <p>2021-present</p>
+                </div>
                 <p class="text-gray-700 text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                 </p>
