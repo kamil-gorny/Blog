@@ -20,7 +20,10 @@
 
 
         <h1 class="mt-10 font-bold text-2xl mb-7">Work experience</h1>
-
-        <WorkExperienceTile company="Nsure" position="Software Engineer" timeframe="2021 - present" description=""/>
-
+        <div class="flex flex-col gap-5">
+            <WorkExperienceTile company="Nsure" position="Tech lead" timeframe="2021 - present" description=""/>
+            <WorkExperienceTile company="Nsure" position="Software Engineer" timeframe="2021 - present" description=""/>
+            <WorkExperienceTile company="Flexible IT" position="Software Engineer" timeframe="2021 - present" description=""/>
+        </div>
+        <h1 class="mt-10 font-bold text-2xl mb-7">Skills</h1>
     </div>
