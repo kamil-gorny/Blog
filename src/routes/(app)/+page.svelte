@@ -1,5 +1,6 @@
 <script>
 import TechnologyButton  from "../../TechnologyButton.svelte";
+import profilePicture from '$lib/images/profile.jpeg';
 import { fade } from 'svelte/transition';
 import {onMount} from "svelte";
 import SocialsButton from "../../SocialsButton.svelte";
@@ -12,8 +13,10 @@ onMount(() =>{
 </script>
 {#if isVisible}
 <div class="pt-12 flex flex-col justify-center w-1/2 self-center" in:fade>
+
     <span class="text-3xl font-bold">Kamil Górny</span>
    <p>I’m a software engineer specializing in .NET and C#.</p>
+    <div class="flex flex-row items-center justify-between">
     <div class="technologies">
         <div>Things I work with:
             <TechnologyButton name=".Net" icon="skill-icons:dotnet"/>
@@ -27,6 +30,8 @@ onMount(() =>{
             <TechnologyButton name="Flutter" icon="logos:flutter"/>
             <TechnologyButton name="Figma" icon="logos:figma"/>
         </div>
+    </div>
+    <img src="{profilePicture}" alt="me" class="w-48 h-48 rounded-xl -rotate-3 border-blue-600 border-8 "/>
     </div>
     <Separator/>
 <p>

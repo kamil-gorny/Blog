@@ -16,9 +16,7 @@
 </script>
 <nav class="w-3/4 flex p-5 flex-row justify-around items-center ml-auto mr-auto">
 	<div class="flex flex-row justify-self-start gap-2.5">
-		<a href="/">
-		<img src={profilePicture} alt="me" class="w-8 h-8 rounded-3xl"/>
-		</a>
+
 	</div>
 	<div class="flex flex-row gap-9">
 		<a href="/">~/</a>
