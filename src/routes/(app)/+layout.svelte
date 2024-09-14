@@ -21,6 +21,7 @@
 		</a>
 	</div>
 	<div class="flex flex-row gap-9">
+		<a href="/">~/</a>
 		<a href="/posts">Blog</a>
 		<a href="/resume" >Resume</a>
 		<a href="https://github.com/kamil-gorny">
