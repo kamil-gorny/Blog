@@ -22,7 +22,6 @@
 	</div>
 	<div class="flex flex-row gap-9">
 		<a href="/posts">Blog</a>
-		<a href="/about">Projects</a>
 		<a href="/resume" >Resume</a>
 		<a href="https://github.com/kamil-gorny">
 		<Github size="18"/>
