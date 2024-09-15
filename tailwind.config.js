@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        'prime': '424245'
+        'prime': '424245',
+        'second': '#1D1D1F',
       }
     }
   },

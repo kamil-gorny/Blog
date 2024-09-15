@@ -31,10 +31,10 @@ onMount(() =>{
             <TechnologyButton name="Figma" icon="logos:figma"/>
         </div>
     </div>
-    <img src="{profilePicture}" alt="me" class="w-48 h-48 rounded-xl -rotate-3 border-blue-600 border-8 "/>
+    <img src="{profilePicture}" alt="me" class="w-48 h-48 rounded-xl -rotate-3 border-second border-8 "/>
     </div>
-    <Separator/>
-<p>
+
+<p class="pt-10">
        Outside of programming I have a strong passion for cybersecurity and actively participate in bug bounty programs during my free time.
     <br><br>My focus is on building secure and scalable systems that empower developers to create with confidence.
     <br><br>
@@ -43,7 +43,7 @@ onMount(() =>{
    </p>
     <Separator/>
     <p>Find me on</p>
-    <div class="flex gap-4 pb-5">
+    <div class="flex gap-4 pb-5 pt-7">
         <SocialsButton name="Github" icon="mdi:github"/>
         <SocialsButton name="Hackerone" icon="cib:hackerone" href="https://hackerone.com/"/>
         <SocialsButton name="Twitter" icon="prime:twitter"/>
