@@ -1,6 +1,6 @@
 <script>
 import TechnologyButton  from "../../TechnologyButton.svelte";
-import profilePicture from '$lib/images/profile.jpeg';
+import profilePicture from '$lib/images/profile-image.jpg';
 import { fade } from 'svelte/transition';
 import {onMount} from "svelte";
 import SocialsButton from "../../SocialsButton.svelte";
@@ -16,7 +16,7 @@ onMount(() =>{
 
     <span class="text-3xl font-bold">Kamil Górny</span>
    <p>I’m a software engineer specializing in .NET and C#.</p>
-    <div class="flex flex-row items-center justify-between">
+    <div class="flex flex-row items-center gap-56">
     <div class="technologies">
         <div>Things I work with:
             <TechnologyButton name=".Net" icon="skill-icons:dotnet"/>
@@ -41,7 +41,7 @@ onMount(() =>{
        I’m currently based in Gdańsk, Poland.
 
    </p>
-    <Separator/>
+
     <p>Find me on</p>
     <div class="flex gap-4 pb-5 pt-7">
         <SocialsButton name="Github" icon="mdi:github"/>
