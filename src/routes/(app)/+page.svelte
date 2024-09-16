@@ -7,6 +7,7 @@ import SocialsButton from "../../SocialsButton.svelte";
 import Separator from "../../Separator.svelte";
 let isVisible = false;
 
+
 onMount(() =>{
     isVisible = true;
 })
@@ -31,7 +32,7 @@ onMount(() =>{
             <TechnologyButton name="Figma" icon="logos:figma"/>
         </div>
     </div>
-    <img src="{profilePicture}" alt="me" class="w-48 h-48 rounded-xl -rotate-3 border-second border-8 "/>
+    <img  src="{profilePicture}" alt="me" class="w-48 h-48 rounded-xl -rotate-3 border-blue-500 border-4 "/>
     </div>
 
 <p class="pt-10">
