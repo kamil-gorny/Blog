@@ -1,14 +1,14 @@
 <script>
-    import {FaFacebook, FaTwitter, FaLink} from "svelte-icons/fa";
+
     import { marked } from 'marked';
     export let data;
 </script>
 <div class="container">
 <div class="post-header">
-    <p class="post-header-date">{data.post.date}</p>
-    <h1>{data.post.title}</h1>
+ <!--   <p class="post-header-date">{data.post.date}</p>
+    <h1>{data.post.title}</h1>-->
     <div class="socials">
-        <div class="icon">
+        <!--<div class="icon">
             <FaFacebook/>
         </div>
         <div class="icon">
@@ -16,14 +16,14 @@
         </div>
         <div class="icon">
             <FaLink />
-        </div>
+        </div>-->
 
 
     </div>
 </div>
 
     <div class="content">
-        {@html marked(data.post.content)}
+        {@html data.content}
     </div>
 </div>
 
