@@ -78,7 +78,10 @@ body{
     100% { transform: rotate(360deg); }
 }
 
-
+code > span{
+    display:table;
+    white-space:normal;
+}
 pre {
     max-inline-size: 100%;
     padding: 1rem;
