@@ -26,6 +26,7 @@ export const load: Load = async ({ params }) => {
     const compiledResponse = await compile(post.content, mdsvexOptions);
 
     return {
+        ...post,
         content: compiledResponse?.code
     };
 };

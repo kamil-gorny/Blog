@@ -1,22 +1,23 @@
 <script>
+    import {Facebook} from "lucide-svelte";
+    import Icon from "@iconify/svelte";
 
-    import { marked } from 'marked';
     export let data;
 </script>
 <div class="container">
 <div class="post-header">
- <!--   <p class="post-header-date">{data.post.date}</p>
-    <h1>{data.post.title}</h1>-->
+    <p class="post-header-date">{data.date}</p>
+    <h1 class="text-2xl font-bold">{data.title}</h1>
     <div class="socials">
-        <!--<div class="icon">
-            <FaFacebook/>
+        <div class="icon">
+            <Icon icon="ic:baseline-facebook" width="1.8em" height="1.8em"  style="color: #1d1d1f"/>
         </div>
         <div class="icon">
-            <FaTwitter/>
+            <Icon icon="mdi:twitter" width="1.8em" height="1.8em"  style="color: #1d1d1f" />
         </div>
         <div class="icon">
-            <FaLink />
-        </div>-->
+            <Icon icon="material-symbols:share" width="2em" height="2em"  style="color: #1d1d1f" />
+        </div>
 
 
     </div>
