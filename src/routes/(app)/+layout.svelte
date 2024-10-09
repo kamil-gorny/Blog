@@ -24,9 +24,6 @@
 		<a href="https://github.com/kamil-gorny">
 		<Github size="18"/>
 		</a>
-		<a href="/contact">
-			<Send size="18" />
-		</a>
 	</div>
 </nav>
 
