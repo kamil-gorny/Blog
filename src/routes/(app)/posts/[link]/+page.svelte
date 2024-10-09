@@ -1,5 +1,4 @@
 <script>
-    import {Facebook} from "lucide-svelte";
     import Icon from "@iconify/svelte";
 
     export let data;
@@ -10,13 +9,13 @@
     <h1 class="text-2xl font-bold">{data.title}</h1>
     <div class="socials">
         <div class="icon">
-            <Icon icon="ic:baseline-facebook" width="1.8em" height="1.8em"  style="color: #1d1d1f"/>
+            <Icon icon="ic:baseline-facebook" width="1.4em" height="1.4em"  style="color: #1d1d1f"/>
         </div>
         <div class="icon">
-            <Icon icon="mdi:twitter" width="1.8em" height="1.8em"  style="color: #1d1d1f" />
+            <Icon icon="mdi:twitter" width="1.4em" height="1.4em"  style="color: #1d1d1f" />
         </div>
         <div class="icon">
-            <Icon icon="material-symbols:share" width="2em" height="2em"  style="color: #1d1d1f" />
+            <Icon icon="material-symbols:share" width="1.4em" height="1.4em"  style="color: #1d1d1f" />
         </div>
 
 

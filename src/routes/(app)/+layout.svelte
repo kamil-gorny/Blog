@@ -1,10 +1,8 @@
 <script>
-	import profilePicture from '$lib/images/profile.jpeg';
-	import { Github } from 'lucide-svelte/icons';
-	import { Send } from 'lucide-svelte';
 	import { navigating } from "$app/stores";
 	import "../../app.css";
 	import NProgress from 'nprogress';
+	import Icon from "@iconify/svelte";
 
 
 	NProgress.configure({ showSpinner: false });
@@ -22,7 +20,7 @@
 		<a href="/">~/</a>
 		<a href="/posts">Blog</a>
 		<a href="https://github.com/kamil-gorny">
-		<Github size="18"/>
+			<Icon icon="mingcute:github-line" width="1.4em" height="1.4em"  style="color: #1d1d1f" />
 		</a>
 	</div>
 </nav>

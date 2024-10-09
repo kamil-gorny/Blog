@@ -4,7 +4,6 @@ import profilePicture from '$lib/images/profile-image.jpg';
 import { fade } from 'svelte/transition';
 import {onMount} from "svelte";
 import SocialsButton from "../../SocialsButton.svelte";
-import Separator from "../../Separator.svelte";
 let isVisible = false;
 
 
