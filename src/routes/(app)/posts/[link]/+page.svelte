@@ -8,7 +8,7 @@
     <p class="text-gray-500">{data.date}</p>
     <h1 class="text-2xl font-bold m-0 p-0">{data.title}</h1>
     <div class="socials">
-        <div class="icon">
+        <div class="text-gray-500">
             <Icon icon="ic:baseline-facebook" width="1.4em" height="1.4em"  style="color: #1d1d1f"/>
         </div>
         <div class="icon">
@@ -30,9 +30,6 @@
 <style>
 
 
-    .icon{
-        color:#7E7E7E;
-    }
 
     .socials{
         padding-top: 11px;
