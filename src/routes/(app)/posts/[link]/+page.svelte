@@ -3,7 +3,7 @@
 
     export let data;
 </script>
-<div class="container">
+<div class="w-1/2 ml-auto mr-auto">
 <div class="flex flex-col pt-24 pb-12 w-4/5 justify-start">
     <p class="post-header-date">{data.date}</p>
     <h1 class="text-2xl font-bold m-0 p-0">{data.title}</h1>
@@ -35,11 +35,7 @@
     .icon{
         color:#7E7E7E;
     }
-    .container{
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+
     .socials{
         padding-top: 11px;
         display: flex;
