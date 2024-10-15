@@ -5,7 +5,7 @@
 </script>
 <div class="w-1/2 ml-auto mr-auto">
 <div class="flex flex-col pt-24 pb-12 w-4/5 justify-start">
-    <p class="post-header-date">{data.date}</p>
+    <p class="text-gray-500">{data.date}</p>
     <h1 class="text-2xl font-bold m-0 p-0">{data.title}</h1>
     <div class="socials">
         <div class="icon">
@@ -29,9 +29,7 @@
 
 <style>
 
-    .post-header-date{
-        color:#7A7A7E;
-    }
+
     .icon{
         color:#7E7E7E;
     }
