@@ -4,9 +4,9 @@
     export let data;
 </script>
 <div class="container">
-<div class="post-header">
+<div class="flex flex-col pt-24 pb-12 w-4/5 justify-start">
     <p class="post-header-date">{data.date}</p>
-    <h1 class="text-2xl font-bold">{data.title}</h1>
+    <h1 class="text-2xl font-bold m-0 p-0">{data.title}</h1>
     <div class="socials">
         <div class="icon">
             <Icon icon="ic:baseline-facebook" width="1.4em" height="1.4em"  style="color: #1d1d1f"/>
@@ -28,6 +28,7 @@
 </div>
 
 <style>
+
     .post-header-date{
         color:#7A7A7E;
     }
@@ -46,16 +47,6 @@
         justify-content: start;
         gap: 8px;
     }
-    .post-header{
-        padding-bottom: 50px;
-        padding-top: 100px;
-        width:80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-    }
-    h1{
-        padding: 0;
-        margin: 0;
-    }
+
+
 </style>
