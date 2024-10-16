@@ -7,7 +7,7 @@
 <div class="flex flex-col pt-24 pb-12 w-4/5 justify-start">
     <p class="text-gray-500">{data.date}</p>
     <h1 class="text-2xl font-bold m-0 p-0">{data.title}</h1>
-    <div class="socials">
+    <div class="pt-3 flex h-4 justify-start gap-2">
         <div class="text-gray-500">
             <Icon icon="ic:baseline-facebook" width="1.4em" height="1.4em"  style="color: #1d1d1f"/>
         </div>
@@ -26,18 +26,3 @@
         {@html data.content}
     </div>
 </div>
-
-<style>
-
-
-
-    .socials{
-        padding-top: 11px;
-        display: flex;
-        height: 16px;
-        justify-content: start;
-        gap: 8px;
-    }
-
-
-</style>
