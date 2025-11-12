@@ -1,10 +1,10 @@
 <script>
-	import { navigating } from "$app/stores";
+        import { navigating } from "$app/stores";
 	import "../../app.css";
 	import NProgress from 'nprogress';
 	import Icon from "@iconify/svelte";
 
-
+    export const prerender = true;
 	NProgress.configure({ showSpinner: false });
 	$: {
 		if ($navigating) {

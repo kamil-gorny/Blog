@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-static';
 import {escapeSvelte, mdsvex} from 'mdsvex'
 import {createHighlighter} from 'shiki'
 import {vitePreprocess} from "@sveltejs/vite-plugin-svelte";
@@ -25,7 +25,16 @@ const config = {
 	extensions: ['.svelte', '.md'],
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+            pages: 'build',
+            assets: 'build',
+            fallback: undefined,
+            precompress: false,
+            strict: true
+        }),
+        paths:{
+            base: '/Blog'
+        }
 	}
 }
 
