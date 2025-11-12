@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-node';
 import {escapeSvelte, mdsvex} from 'mdsvex'
 import {createHighlighter} from 'shiki'
 import {vitePreprocess} from "@sveltejs/vite-plugin-svelte";
